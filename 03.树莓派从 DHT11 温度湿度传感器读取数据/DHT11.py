@@ -15,16 +15,10 @@ class Sense_DHT11(multiprocessing.Process):
         self.temperature = None
         self.humidity = None
 
-    def get_temperature(self):
-        return self.temperature
-        pass
-
-    def get_humidity(self):
-        return self.humidity
-        pass
-
-    def run(self):
+    def start(self):
         while True:
+            self.temperature = None
+            self.humidity = None
             # 主机复位信号
             #发送开始信号
             GPIO.setup(self.pin,GPIO.OUT)
@@ -64,7 +58,7 @@ class Sense_DHT11(multiprocessing.Process):
 
 
                 # 可能时间会不一样,所以可以改一下3这个值
-                if k < 3:
+                if k < 10:
                     # 数字1表示的时间为26-28us
                     data.append(0)
                 else:
@@ -102,9 +96,7 @@ class Sense_DHT11(multiprocessing.Process):
                 self.temperature = "%s.%s" % (temperature,temperature_point)
                 self.humidity = "%s.%s" % (humidity,humidity_point)
                 print "温度:" + self.temperature + "湿度:" + self.humidity
-                break
-                #return (humidity,humidity_point,temperature,temperature_point)
-
+                return (humidity,humidity_point,temperature,temperature_point)
 
     def __del__(self):
         pass

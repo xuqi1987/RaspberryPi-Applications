@@ -4,10 +4,8 @@ import time
 
 dht = Sense_DHT11(26)
 
-dht.start()
+print dht.start()
 
-while dht.get_temperature() == None:
-    time.sleep(0.1)
 
-print dht.get_temperature()
+
 
