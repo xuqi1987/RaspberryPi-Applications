@@ -36,8 +36,8 @@
       <file leaf-file-name="DHT11.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DHT11.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5179584">
-              <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.7164461">
+              <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
               <folding>
                 <element signature="e#22#45#0" expanded="true" />
               </folding>
@@ -342,8 +342,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/DHT11.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5179584">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.7164461">
+          <caret line="98" column="30" selection-start-line="98" selection-start-column="30" selection-end-line="98" selection-end-column="30" />
           <folding>
             <element signature="e#22#45#0" expanded="true" />
           </folding>

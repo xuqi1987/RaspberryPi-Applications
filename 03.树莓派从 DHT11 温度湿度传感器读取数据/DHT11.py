@@ -96,7 +96,7 @@ class Sense_DHT11():
                 print "温度:" + self.temperature + "湿度:" + self.humidity
                 return (self.temperature,self.humidity)
             else:
-                time.sleep(0.1)
+                time.sleep(0.5)
                 print "please wait"
 
     def __del__(self):
