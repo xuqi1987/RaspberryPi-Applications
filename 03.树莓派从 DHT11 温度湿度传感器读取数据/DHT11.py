@@ -1,12 +1,10 @@
 # -*- coding:utf8 -*-
 import RPi.GPIO as GPIO
-import multiprocessing
 import time
-
 # 将这个类定义成进程
-class Sense_DHT11(multiprocessing.Process):
+class Sense_DHT11():
     def __init__(self,out_pin):
-        multiprocessing.Process.__init__(self)
+
         self.pin = out_pin
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
@@ -96,7 +94,10 @@ class Sense_DHT11(multiprocessing.Process):
                 self.temperature = "%s.%s" % (temperature,temperature_point)
                 self.humidity = "%s.%s" % (humidity,humidity_point)
                 print "温度:" + self.temperature + "湿度:" + self.humidity
-                return (humidity,humidity_point,temperature,temperature_point)
+                return (self.temperature,self.humidity)
+            else:
+                time.sleep(0.1)
+                print "please wait"
 
     def __del__(self):
         pass
