@@ -5,6 +5,7 @@ import time
 class Sense_DHT11():
     def __init__(self,out_pin):
         self.pin = out_pin
+        GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(out_pin,GPIO.OUT)
         GPIO.output(out_pin,GPIO.HIGH)
