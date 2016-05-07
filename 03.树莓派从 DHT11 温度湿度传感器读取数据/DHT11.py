@@ -101,9 +101,10 @@ class Sense_DHT11(multiprocessing.Process):
             if check==tmp:
                 self.temperature = "%s.%s" % (temperature,temperature_point)
                 self.humidity = "%s.%s" % (humidity,humidity_point)
+                print "温度:" + self.temperature + "湿度:" + self.humidity
+                break
                 #return (humidity,humidity_point,temperature,temperature_point)
-            else:
-                return None
+
 
     def __del__(self):
         pass
