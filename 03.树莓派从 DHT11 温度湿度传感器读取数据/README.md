@@ -125,4 +125,4 @@ class Sense_DHT11():
 
 树莓派连接方法：
 
-![](http://cl.ly/1H3j2m413O3W/Image%202016-05-07%20at%205.35.53%20%E4%B8%8B%E5%8D%88.png)
+![](http://cl.ly/0O1R2m101A3o/Image%202016-05-07%20at%206.46.57%20%E4%B8%8B%E5%8D%88.png)
