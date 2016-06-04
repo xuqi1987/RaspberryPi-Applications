@@ -21,6 +21,7 @@ class mongodatabase():
     def connect(self,dbname):
         self.host = getConfig(self.conf,'database','dbhost')
         self.port = getConfig(self.conf,'database','dbport')
+
         self.client = pymongo.MongoClient(host=self.host,port=int(self.port))
         self.dbname = dbname
         self.db = None

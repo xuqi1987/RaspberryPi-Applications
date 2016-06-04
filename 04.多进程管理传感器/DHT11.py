@@ -110,20 +110,20 @@ class Sense_DHT11(multiprocessing.Process):
         client = mongodatabase('db.conf')
         client.connect("raspberry")
         self.db = client.get_db()
-
+	print "连接数据库成功~"
         while True:
             try:
                 data = self.update()
             except Exception,X:
                 #print X
-		        pass
+		pass
             else:
-                #print data
+                print data
                	#print self.db
-                self.db.raspberry.insert(data)
+                self.db.dht11.insert(data)
                 pass
             finally:
-                time.sleep(1)
+                time.sleep(3600)
                 pass
 
 
