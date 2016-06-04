@@ -110,7 +110,7 @@ class Sense_DHT11(multiprocessing.Process):
         client = mongodatabase('db.conf')
         client.connect("raspberry")
         self.db = client.get_db()
-        print "连接数据库成功~"
+        print"%s连接数据库成功~"%self.__class__
 
         while True:
             try:
