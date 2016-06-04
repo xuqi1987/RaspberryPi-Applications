@@ -102,13 +102,13 @@ class Sense_DHT11(multiprocessing.Process):
             return {"温度":self.temperature,"湿度":self.humidity,"时间":datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         else:
             raise Exception("没有取的温度")
-            return None
         pass
 
 
     def run(self):
-        client = mongodatabase()
-        client.connect("192.168.1.110",27016,"raspberry")
+
+        client = mongodatabase('db.conf')
+        client.connect("raspberry")
         self.db = client.get_db()
 
         while True:
@@ -116,11 +116,11 @@ class Sense_DHT11(multiprocessing.Process):
                 data = self.update()
             except Exception,X:
                 #print X
-		pass
+		        pass
             else:
-		#print data
+                #print data
                	#print self.db
-		self.db.raspberry.insert(data)
+                self.db.raspberry.insert(data)
                 pass
             finally:
                 time.sleep(1)

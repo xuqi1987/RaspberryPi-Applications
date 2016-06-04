@@ -3,15 +3,25 @@
 
 import pymongo
 import datetime
+import ConfigParser
+import os
+
+#获取config配置文件
+def getConfig(conf,section, key):
+    config = ConfigParser.ConfigParser()
+    path = os.path.split(os.path.realpath(__file__))[0] + '/'+ conf
+    config.read(path)
+    return config.get(section, key)
 
 class mongodatabase():
-    def __init__(self):
+    def __init__(self,conf):
+        self.conf = conf
         pass
 
-    def connect(self,host,port,dbname):
-        self.host = host
-        self.port = port
-        self.client = pymongo.MongoClient(host=host,port=port)
+    def connect(self,dbname):
+        self.host = getConfig(self.conf,'database','dbhost')
+        self.port = getConfig(self.conf,'database','dbport')
+        self.client = pymongo.MongoClient(host=self.host,port=self.port)
         self.dbname = dbname
         self.db = None
     def get_db(self):
