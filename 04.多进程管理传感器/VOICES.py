@@ -33,14 +33,14 @@ class Sense_Voice(multiprocessing.Process):
 
             time.sleep(0.01)
 
-        return {"声音":n < 0}
+        return {"声音":n < 0,"时间":datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
     def run(self):
 
         client = mongodatabase('db.conf')
         client.connect("raspberry")
         self.db = client.get_db()
-        print"%s连接数据库成功~"%self.__class__.name
+        print"%s连接数据库成功~"%self.__class__
 
         while True:
             try:
@@ -52,7 +52,7 @@ class Sense_Voice(multiprocessing.Process):
                 #print data
                 #print self.db
                 if data["声音"]:
-                    print data
+                    print "有声音:%s"%datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
                     self.db.voice.insert(data)
                 pass
             finally:
