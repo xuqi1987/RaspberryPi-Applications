@@ -17,19 +17,20 @@ class Sense_Light(multiprocessing.Process):
         GPIO.setwarnings(False)
         GPIO.setmode(GPIO.BCM)
         GPIO.setup(self.pin,GPIO.IN)
-
+        self.last = False
         pass
 
     def update(self):
         light = False
-        last = False
+
         while True:
             if GPIO.input(self.pin) == GPIO.HIGH:
                 light = False
             else:
                 light = True
 
-            if last != light:
+            if self.last != light:
+                self.last = light
                 break
             time.sleep(0.5)
 
