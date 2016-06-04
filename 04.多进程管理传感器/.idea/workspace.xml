@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/VOICES.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
+              <caret line="26" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
               <folding>
                 <element signature="e#46#69#0" expanded="true" />
               </folding>
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LIGHT.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LIGHT.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LIGHT.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38573316">
-              <caret line="26" column="25" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="25" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
               <folding>
                 <element signature="e#46#69#0" expanded="true" />
               </folding>
@@ -57,11 +57,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.py">
+      <file leaf-file-name="HUMAN.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HUMAN.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+              <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
+              <folding>
+                <element signature="e#46#69#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55482167">
+              <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
               <folding>
                 <element signature="e#22#44#0" expanded="true" />
               </folding>
@@ -110,8 +122,9 @@
         <option value="$PROJECT_DIR$/DATABASE.py" />
         <option value="$PROJECT_DIR$/DHT11.py" />
         <option value="$PROJECT_DIR$/VOICES.py" />
-        <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/LIGHT.py" />
+        <option value="$PROJECT_DIR$/HUMAN.py" />
+        <option value="$PROJECT_DIR$/app.py" />
       </list>
     </option>
   </component>
@@ -538,16 +551,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/VOICES.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
-          <folding>
-            <element signature="e#46#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DHT11.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -558,22 +561,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.py">
+    <entry file="file://$PROJECT_DIR$/VOICES.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+          <caret line="26" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
           <folding>
-            <element signature="e#22#44#0" expanded="true" />
+            <element signature="e#46#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LIGHT.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38573316">
-          <caret line="26" column="25" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="31" selection-start-line="0" selection-start-column="0" selection-end-line="59" selection-end-column="20" />
           <folding>
             <element signature="e#46#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HUMAN.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#46#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55482167">
+          <caret line="28" column="33" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="33" />
+          <folding>
+            <element signature="e#22#44#0" expanded="true" />
           </folding>
         </state>
       </provider>

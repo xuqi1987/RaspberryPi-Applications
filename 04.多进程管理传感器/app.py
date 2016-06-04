@@ -8,8 +8,7 @@ import random
 from DHT11 import Sense_DHT11
 from VOICES import Sense_Voice
 from LIGHT import Sense_Light
-
-
+from HUMAN import Sense_Human
 
 if __name__ == "__main__":
 
@@ -25,6 +24,9 @@ if __name__ == "__main__":
     record.append(process)
 
     process = Sense_Light(lock,[13])
+    record.append(process)
+
+    process = Sense_Human(lock,[6])
     record.append(process)
     # start all progress
     for process in record:
