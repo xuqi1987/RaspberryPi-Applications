@@ -16,7 +16,7 @@ class mongodatabase():
         self.db = None
     def get_db(self):
         # 建立连接
-        db = self.client[self.dbname]
+        self.db = self.client[self.dbname]
         #或者 db = client.example
-        return db
+        return self.db
 

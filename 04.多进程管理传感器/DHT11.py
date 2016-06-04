@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 import time
 import multiprocessing
 from DATABASE import mongodatabase
-
+import datetime
 
 # 将这个类定义成进程
 class Sense_DHT11(multiprocessing.Process):
@@ -99,7 +99,7 @@ class Sense_DHT11(multiprocessing.Process):
         if check==tmp:
             self.temperature = "%s.%s" % (temperature,temperature_point)
             self.humidity = "%s.%s" % (humidity,humidity_point)
-            return {"温度":self.temperature,"湿度":self.humidity}
+            return {"温度":self.temperature,"湿度":self.humidity,"时间":datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
         else:
             raise Exception("没有取的温度")
             return None
@@ -115,12 +115,15 @@ class Sense_DHT11(multiprocessing.Process):
             try:
                 data = self.update()
             except Exception,X:
-                print X
+                #print X
+		pass
             else:
-                self.db.insert(data)
+		#print data
+               	#print self.db
+		self.db.raspberry.insert(data)
                 pass
             finally:
-                time.sleep(0.5)
+                time.sleep(1)
                 pass
 
 

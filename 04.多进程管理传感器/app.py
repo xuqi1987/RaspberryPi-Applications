@@ -7,7 +7,6 @@ import pymongo
 import random
 from DHT11 import Sense_DHT11
 
-def init_gpio_pin():
 
 
 if __name__ == "__main__":
@@ -17,7 +16,7 @@ if __name__ == "__main__":
 
     lock = multiprocessing.Lock()
 
-    process = Sense_DHT11(lock,[16])
+    process = Sense_DHT11(lock,[26])
     record.append(process)
 
     
