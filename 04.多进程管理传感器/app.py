@@ -26,8 +26,8 @@ if __name__ == "__main__":
     process = Sense_Light(lock,[13])
     record.append(process)
 
-    process = Sense_Human(lock,[6])
-    record.append(process)
+    #process = Sense_Human(lock,[6])
+    #record.append(process)
     # start all progress
     for process in record:
         process.start()
