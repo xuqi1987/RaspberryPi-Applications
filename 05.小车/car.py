@@ -4,17 +4,13 @@ import datetime
 import time
 
 class Wheel(object):
-    def __init__(self,in_pin1,in_pin2,enable_pin1,enable_pin2):
+    def __init__(self,in_pin1,in_pin2):
         self.pin1 = in_pin1
         self.pin2 = in_pin2
 
         GPIO.setup(in_pin1,GPIO.OUT)
         GPIO.setup(in_pin2,GPIO.OUT)
-        GPIO.setup(enable_pin1,GPIO.OUT)
-        GPIO.setup(enable_pin2,GPIO.OUT)
 
-        GPIO.output(enable_pin1,True)
-        GPIO.output(enable_pin2,True)
         pass
 
     def forword(self):
